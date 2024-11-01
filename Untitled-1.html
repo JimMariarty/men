@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 42px;
+        }
+    </style>
+</head>
+<body>
+    {
+    
+}
+
+    <h1 id="nom"> Sahifa</h1>
+    <script>
+       
+    let nom=document.getElementById("nom");
+     function vaqt(){
+        let sana = new Date();
+    let soat = sana.getHours();
+    let daqiqa = sana.getMinutes();
+    let soniya = sana.getSeconds();
+    
+
+    if(soat<10) soat = "0" + soat;
+    if(daqiqa<10) daqiqa = "0" + daqiqa;
+    if(soniya<10) soniya = "0" + soniya;
+
+    if(soniya%2==0){nom.innerHTML = soat + ":" + daqiqa + ":" + soniya;}
+    if(soniya%2!==0){nom.innerHTML = soat + ":" + daqiqa + ":" + soniya;}
+  
+    nom.innerHTML = soat + ":" + daqiqa + ":" + soniya;
+     }
+   setInterval(vaqt,1000);
+    </script>
+
+</body>
+</html>
